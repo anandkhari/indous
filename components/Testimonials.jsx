@@ -26,20 +26,20 @@ export default function Testimonials() {
               <div className="flex items-center mb-6">
                 <div className="relative">
                   <img
-                    src="https://randomuser.me/api/portraits/women/44.jpg"
-                    alt="Anjali K."
-                    className="w-16 h-16 rounded-full mr-6 border-4 border-white shadow-lg"
+                    src="/test1.jpeg"
+                    alt="Anupama"
+                    className="w-16 h-16 object-fit rounded-full mr-6 border-4 border-white shadow-lg"
                   />
-                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white"></div>
+                 
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 font-['Poppins']">Anjali K.</h4>
-                  <p className="text-teal-600 font-semibold font-['Roboto']">Registered Nurse, Canada</p>
-                  <p className="text-sm text-gray-500 font-['Roboto']">Toronto General Hospital</p>
+                  <h4 className="text-xl font-bold text-gray-900 font-['Poppins']">Anupama</h4>
+                  <p className="text-teal-600 font-semibold font-['Roboto']">Caregiver, Italy</p>
+                 
                 </div>
               </div>
               <blockquote className="text-gray-700 text-lg leading-relaxed italic mb-6 font-['Roboto']">
-                "INDO-US Nexus transformed my dream into reality. Their guidance through the entire process was exceptional. I've been working in Toronto for 2 years now with excellent salary and benefits. The support didn't end after placement - they continue to check on my progress."
+                I am truly grateful to INDOUS NEXUS LLP for helping me secure a caregiver job in Italy. From the very beginning, the team was professional, supportive, and transparent throughout the entire process. They guided me step by step, and made sure everything was smooth and stress-free.
               </blockquote>
               <div className="flex items-center justify-between">
                 <div className="flex text-amber-400">
@@ -50,7 +50,7 @@ export default function Testimonials() {
                   <Star fill="currentColor" />
                 </div>
                 <div className="text-sm text-gray-500 flex items-center gap-1 font-['Roboto']">
-                  <MapPin size={14} /> Toronto, Canada
+                  <MapPin size={14} /> Italy
                 </div>
               </div>
             </div>
@@ -60,20 +60,20 @@ export default function Testimonials() {
               <div className="flex items-center mb-6">
                 <div className="relative">
                   <img
-                    src="https://randomuser.me/api/portraits/men/32.jpg"
-                    alt="Rajesh M."
+                    src="/test2.jpg"
+                    alt="Wilfred nigli."
                     className="w-16 h-16 rounded-full mr-6 border-4 border-white shadow-lg"
                   />
-                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white"></div>
+                  
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 font-['Poppins']">Rajesh M.</h4>
-                  <p className="text-teal-600 font-semibold font-['Roboto']">Software Engineer, USA</p>
-                  <p className="text-sm text-gray-500 font-['Roboto']">Google, Mountain View</p>
+                  <h4 className="text-xl font-bold text-gray-900 font-['Poppins']">Wilfred nigli</h4>
+                  <p className="text-teal-600 font-semibold font-['Roboto']"> Restaurant ,Italy</p>
+                  
                 </div>
               </div>
               <blockquote className="text-gray-700 text-lg leading-relaxed italic mb-6 font-['Roboto']">
-                "The visa process seemed impossible, but INDO-US Nexus handled everything professionally. They matched me with a top tech company in California and helped negotiate an amazing package. My salary increased by 400% compared to my India job!"
+ would like to sincerely thank INDOUS NEXUS LLP for helping me get a job as a restaurant worker in Italy. The entire team was very professional, supportive, and reliable throughout the process. They guided me with all the necessary steps, provided clear information, and made sure everything went smoothly until I reached my destination.
               </blockquote>
               <div className="flex items-center justify-between">
                 <div className="flex text-amber-400">
@@ -84,7 +84,7 @@ export default function Testimonials() {
                   <Star fill="currentColor" />
                 </div>
                 <div className="text-sm text-gray-500 flex items-center gap-1 font-['Roboto']">
-                  <MapPin size={14} /> California, USA
+                  <MapPin size={14} /> Italy
                 </div>
               </div>
             </div>
@@ -94,20 +94,20 @@ export default function Testimonials() {
               <div className="flex items-center mb-6">
                 <div className="relative">
                   <img
-                    src="https://randomuser.me/api/portraits/men/75.jpg"
+                    src="/test3.jpg"
                     alt="Sameer P."
                     className="w-16 h-16 rounded-full mr-6 border-4 border-white shadow-lg"
                   />
-                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white"></div>
+                 
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 font-['Poppins']">Sameer P.</h4>
-                  <p className="text-teal-600 font-semibold font-['Roboto']">Senior Accountant, UAE</p>
-                  <p className="text-sm text-gray-500 font-['Roboto']">KPMG, Dubai</p>
+                  <h4 className="text-xl font-bold text-gray-900 font-['Poppins']">George.</h4>
+                  <p className="text-teal-600 font-semibold font-['Roboto']">Malaysia,</p>
+               
                 </div>
               </div>
               <blockquote className="text-gray-700 text-lg leading-relaxed italic mb-6 font-['Roboto']">
-                "I was initially skeptical, but their ISO certification gave me confidence. They found me a position in Dubai with a reputable firm. The relocation assistance was particularly helpful for my family. Tax-free income was a game-changer!"
+                I am very thankful to INDOUS NEXUS LLP for helping me secure a job as a restaurant worker in Malaysia. The team was professional, transparent, and made the process smooth. I truly appreciate their efforts and highly recommend them to anyone looking for genuine job placements abroad.
               </blockquote>
               <div className="flex items-center justify-between">
                 <div className="flex text-amber-400">
@@ -118,7 +118,7 @@ export default function Testimonials() {
                   <StarHalf fill="currentColor" />
                 </div>
                 <div className="text-sm text-gray-500 flex items-center gap-1 font-['Roboto']">
-                  <MapPin size={14} /> Dubai, UAE
+                  <MapPin size={14} /> Malaysia
                 </div>
               </div>
             </div>
@@ -128,20 +128,20 @@ export default function Testimonials() {
               <div className="flex items-center mb-6">
                 <div className="relative">
                   <img
-                    src="https://randomuser.me/api/portraits/women/68.jpg"
-                    alt="Priya S."
+                    src="/test4.jpeg"
+                    alt="."
                     className="w-16 h-16 rounded-full mr-6 border-4 border-white shadow-lg"
                   />
-                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white"></div>
+            
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 font-['Poppins']">Priya S.</h4>
-                  <p className="text-teal-600 font-semibold font-['Roboto']">Marketing Manager, UK</p>
-                  <p className="text-sm text-gray-500 font-['Roboto']">BBC, London</p>
+                  <h4 className="text-xl font-bold text-gray-900 font-['Poppins']">Akhsay</h4>
+                  <p className="text-teal-600 font-semibold font-['Roboto']">Automobile, Japan</p>
+            
                 </div>
               </div>
               <blockquote className="text-gray-700 text-lg leading-relaxed italic mb-6 font-['Roboto']">
-                "Working with the BBC was always my dream. INDO-US Nexus not only made it possible but also prepared me thoroughly for the British work culture. The interview coaching was phenomenal. Now I'm leading campaigns for one of the world's most respected media companies."
+               Thanks to INDOUS NEXUS LLP, I got the chance to work as a car factory worker in Japan. The whole process was smooth, and the team supported me at every step. I’m very satisfied with their service and truly appreciate their guidance. Highly recommended!
               </blockquote>
               <div className="flex items-center justify-between">
                 <div className="flex text-amber-400">
@@ -152,7 +152,7 @@ export default function Testimonials() {
                   <Star fill="currentColor" />
                 </div>
                 <div className="text-sm text-gray-500 flex items-center gap-1 font-['Roboto']">
-                  <MapPin size={14} /> London, UK
+                  <MapPin size={14} /> Japan
                 </div>
               </div>
             </div>

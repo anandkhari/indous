@@ -1,6 +1,16 @@
 "use client";
 
 import { Briefcase, GraduationCap, Coins, UserCheck, Plane } from "lucide-react";
+import { motion } from "framer-motion";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, delay: i * 0.2 },
+  }),
+};
 
 export default function Services() {
   return (
@@ -17,85 +27,90 @@ export default function Services() {
           </p>
         </div>
 
-        {/* First Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {/* Work Visa */}
-          <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-teal-50 to-white 
-                          shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105">
-            <div className="w-20 h-20 bg-gradient-to-br from-teal-400 to-teal-600 rounded-2xl 
-                            flex items-center justify-center mx-auto mb-6">
-              <Briefcase className="text-white w-10 h-10" />
-            </div>
-            <h3 className="text-2xl font-bold mb-4 text-gray-900 font-['Poppins']">
-              Work Visa
-            </h3>
-            <p className="text-gray-600 leading-relaxed font-['Roboto']">
-              Secure the right work visa with complete documentation and employer support.
-            </p>
-          </div>
-
-          {/* Study Abroad */}
-          <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-teal-50 to-white 
-                          shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105">
-            <div className="w-20 h-20 bg-gradient-to-br from-teal-400 to-teal-600 rounded-2xl 
-                            flex items-center justify-center mx-auto mb-6">
-              <GraduationCap className="text-white w-10 h-10" />
-            </div>
-            <h3 className="text-2xl font-bold mb-4 text-gray-900 font-['Poppins']">
-              Study Abroad
-            </h3>
-            <p className="text-gray-600 leading-relaxed font-['Roboto']">
-              Get expert guidance for admissions, student visas, and overseas education.
-            </p>
-          </div>
-
-          {/* Investment Visa */}
-          <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-teal-50 to-white 
-                          shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105">
-            <div className="w-20 h-20 bg-gradient-to-br from-teal-400 to-teal-600 rounded-2xl 
-                            flex items-center justify-center mx-auto mb-6">
-              <Coins className="text-white w-10 h-10" />
-            </div>
-            <h3 className="text-2xl font-bold mb-4 text-gray-900 font-['Poppins']">
-              Investment Visa
-            </h3>
-            <p className="text-gray-600 leading-relaxed font-['Roboto']">
-              Unlock opportunities abroad with investment-based visa pathways.
-            </p>
-          </div>
+        {/* First Row: 3 cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
+          {[
+            {
+              icon: <Briefcase className="text-white w-10 h-10" />,
+              title: "Work Visa",
+              description:
+                "Secure the right work visa with complete documentation and employer support.",
+            },
+            {
+              icon: <GraduationCap className="text-white w-10 h-10" />,
+              title: "Study Abroad",
+              description:
+                "Get expert guidance for admissions, student visas, and overseas education.",
+            },
+            {
+              icon: <Coins className="text-white w-10 h-10" />,
+              title: "Investment Visa",
+              description:
+                "Unlock opportunities abroad with investment-based visa pathways.",
+            },
+          ].map((service, index) => (
+            <motion.div
+              key={index}
+              className="text-center p-8 rounded-2xl bg-gradient-to-br from-teal-50 to-white 
+                         shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105"
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={cardVariants}
+            >
+              <div className="w-20 h-20 bg-gradient-to-br from-teal-400 to-teal-600 rounded-2xl 
+                              flex items-center justify-center mx-auto mb-6">
+                {service.icon}
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900 font-['Poppins']">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed font-['Roboto']">
+                {service.description}
+              </p>
+            </motion.div>
+          ))}
         </div>
 
-        {/* Second Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 max-w-4xl mx-auto">
-          {/* PR Pathway */}
-          <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-teal-50 to-white 
-                          shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105">
-            <div className="w-20 h-20 bg-gradient-to-br from-teal-400 to-teal-600 rounded-2xl 
-                            flex items-center justify-center mx-auto mb-6">
-              <UserCheck className="text-white w-10 h-10" />
-            </div>
-            <h3 className="text-2xl font-bold mb-4 text-gray-900 font-['Poppins']">
-              PR Pathway
-            </h3>
-            <p className="text-gray-600 leading-relaxed font-['Roboto']">
-              Build your future with permanent residency support and legal guidance.
-            </p>
-          </div>
-
-          {/* Air Ticketing */}
-          <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-teal-50 to-white 
-                          shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105">
-            <div className="w-20 h-20 bg-gradient-to-br from-teal-400 to-teal-600 rounded-2xl 
-                            flex items-center justify-center mx-auto mb-6">
-              <Plane className="text-white w-10 h-10" />
-            </div>
-            <h3 className="text-2xl font-bold mb-4 text-gray-900 font-['Poppins']">
-              Air Ticketing
-            </h3>
-            <p className="text-gray-600 leading-relaxed font-['Roboto']">
-              Hassle-free flight bookings with special fares and travel assistance.
-            </p>
-          </div>
+        {/* Second Row: 2 cards centered */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+          {[
+            {
+              icon: <UserCheck className="text-white w-10 h-10" />,
+              title: "PR Pathway",
+              description:
+                "Build your future with permanent residency support and legal guidance.",
+            },
+            {
+              icon: <Plane className="text-white w-10 h-10" />,
+              title: "Air Ticketing",
+              description:
+                "Hassle-free flight bookings with special fares and travel assistance.",
+            },
+          ].map((service, index) => (
+            <motion.div
+              key={index}
+              className="text-center p-8 rounded-2xl bg-gradient-to-br from-teal-50 to-white 
+                         shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105"
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={cardVariants}
+            >
+              <div className="w-20 h-20 bg-gradient-to-br from-teal-400 to-teal-600 rounded-2xl 
+                              flex items-center justify-center mx-auto mb-6">
+                {service.icon}
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900 font-['Poppins']">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed font-['Roboto']">
+                {service.description}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

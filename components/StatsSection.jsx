@@ -1,6 +1,8 @@
 "use client";
 
 import { Building, Users, Award } from "lucide-react";
+import CountUp from "react-countup";
+import { motion } from "framer-motion";
 
 export default function StatsSection() {
   return (
@@ -11,31 +13,55 @@ export default function StatsSection() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 font-['poppins'] text-center text-white">
 
             {/* Franchises */}
-            <div className="flex flex-col items-center space-y-2">
+            <motion.div 
+              className="flex flex-col items-center space-y-2"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 rounded-full flex items-center justify-center mb-3">
                 <Building className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
-              <p className="text-3xl sm:text-4xl font-bold">72+</p>
+              <p className="text-3xl sm:text-4xl font-bold">
+                <CountUp end={72} duration={2} />+
+              </p>
               <p className="text-sm sm:text-base opacity-90">Franchises Across Kerala</p>
-            </div>
+            </motion.div>
 
             {/* Successful Placements */}
-            <div className="flex flex-col items-center space-y-2">
+            <motion.div 
+              className="flex flex-col items-center space-y-2"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 rounded-full flex items-center justify-center mb-3">
                 <Users className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
-              <p className="text-3xl sm:text-4xl font-bold">4000+</p>
+              <p className="text-3xl sm:text-4xl font-bold">
+                <CountUp end={4000} duration={2} />+
+              </p>
               <p className="text-sm sm:text-base opacity-90">Successful Placements</p>
-            </div>
+            </motion.div>
 
             {/* ISO Certified */}
-            <div className="flex flex-col items-center space-y-2">
+            <motion.div 
+              className="flex flex-col items-center space-y-2"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 rounded-full flex items-center justify-center mb-3">
                 <Award className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
-              <p className="text-3xl sm:text-4xl font-bold">ISO</p>
+              <p className="text-3xl sm:text-4xl font-bold">
+                ISO
+              </p>
               <p className="text-sm sm:text-base opacity-90">9001:2015 Certified</p>
-            </div>
+            </motion.div>
 
           </div>
         </div>

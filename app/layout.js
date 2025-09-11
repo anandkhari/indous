@@ -3,7 +3,7 @@ import { Poppins, Roboto } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SimplePageLoader from "@/components/SimplePageLoader";
-import WhatsAppButton from "@/components/WhatsAppButton";
+
 
 const poppins = Poppins({
   subsets: ['latin'],

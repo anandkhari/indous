@@ -1,6 +1,7 @@
 import ContactUs from '@/components/ContactUs'
 import Map from '@/components/Map'
 import React from 'react'
+import WhatsAppButton from '@/components/Whatsappbutton';
 
 export const metadata = {
   title: "Contact IndoUS Nexus LLP | Study Abroad & Careers",
@@ -36,6 +37,7 @@ const page = () => {
     <div>
       <ContactUs />
       <Map />
+      <WhatsAppButton />
     </div>
   )
 }

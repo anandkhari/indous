@@ -1,5 +1,4 @@
 "use client";
-
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -52,25 +51,35 @@ export default function ContactUs() {
             GET IN TOUCH
           </h2>
 
-          <div className="space-y-6">
+          {/* ✅ Formspree Form */}
+          <form
+            action="https://formspree.io/f/mkgvydld" // <-- replace with your Formspree endpoint
+            method="POST"
+            className="space-y-6"
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Name */}
               <div>
                 <label className="block text-gray-700 mb-2 font-medium font-['poppins']">
                   NAME
                 </label>
                 <input
                   type="text"
+                  name="name"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                   placeholder="Enter your name*"
                   required
                 />
               </div>
+
+              {/* Email */}
               <div>
                 <label className="block text-gray-700 mb-2 font-medium font-['poppins']">
                   EMAIL
                 </label>
                 <input
                   type="email"
+                  name="email"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                   placeholder="Enter your email*"
                   required
@@ -78,36 +87,47 @@ export default function ContactUs() {
               </div>
             </div>
 
+            {/* Phone */}
             <div>
               <label className="block text-gray-700 mb-2 font-medium font-['poppins']">
                 PHONE NUMBER
               </label>
               <input
                 type="tel"
+                name="phone"
+                pattern="[0-9]{10,15}"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 placeholder="Enter your phone number*"
                 required
               />
+              <p className="text-sm text-gray-500 mt-1">
+                {/* Format: digits only, min 10 – max 15 */}
+              </p>
             </div>
 
+            {/* Message */}
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 font-['poppins']">
                 YOUR MESSAGE
               </h3>
               <textarea
+                name="message"
                 rows="5"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                 placeholder="Type your message here..."
+                required
               />
             </div>
 
+            {/* Submit */}
             <motion.button
               whileHover={{ scale: 1.05 }}
+              type="submit"
               className="w-full bg-teal-500 hover:bg-teal-600 text-white py-3 px-6 rounded-lg font-semibold font-['poppins'] transition-colors"
             >
               SEND MESSAGE
             </motion.button>
-          </div>
+          </form>
         </motion.div>
 
         {/* Right Column: Contact Info */}
@@ -133,13 +153,22 @@ export default function ContactUs() {
                     PHONE
                   </h3>
                   <div className="flex flex-col space-y-1">
-                    <a href="tel:+917994101243" className="text-gray-700 hover:text-teal-500 transition-colors">
+                    <a
+                      href="tel:+917994101243"
+                      className="text-gray-700 hover:text-teal-500 transition-colors"
+                    >
                       +91 79941 01243
                     </a>
-                    <a href="tel:+919567276183" className="text-gray-700 hover:text-teal-500 transition-colors">
+                    <a
+                      href="tel:+919567276183"
+                      className="text-gray-700 hover:text-teal-500 transition-colors"
+                    >
                       +91 95672 76183
                     </a>
-                    <a href="tel:+919400211243" className="text-gray-700 hover:text-teal-500 transition-colors">
+                    <a
+                      href="tel:+919400211243"
+                      className="text-gray-700 hover:text-teal-500 transition-colors"
+                    >
                       +91 94002 11243
                     </a>
                   </div>
@@ -171,7 +200,10 @@ export default function ContactUs() {
                   <h3 className="font-semibold text-gray-900 font-['poppins']">
                     EMAIL
                   </h3>
-                  <a href="mailto:indousnexusllp@gmail.com" className="text-gray-700 hover:text-teal-500 transition-colors">
+                  <a
+                    href="mailto:indousnexusllp@gmail.com"
+                    className="text-gray-700 hover:text-teal-500 transition-colors"
+                  >
                     indousnexusllp@gmail.com
                   </a>
                 </div>
@@ -189,13 +221,13 @@ export default function ContactUs() {
                 <thead>
                   <tr className="border-b border-gray-300">
                     <th className="pb-2 font-['poppins']">DAY</th>
-                    <th className="pb-2 font-['poppins']">MONDAY - FRIDAY</th>
+                    <th className="pb-2 font-['poppins']">MONDAY - SATURDAY</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td className="py-3 font-['poppins']">HOURS</td>
-                    <td className="py-3">9:00 am - 8:00 pm</td>
+                    <td className="py-3">9:30 am - 5:00 pm</td>
                   </tr>
                 </tbody>
               </table>

@@ -94,8 +94,8 @@ export default function Testimonials() {
               <div className="flex items-center mb-6">
                 <div className="relative">
                   <img
-                    src="/test3.jpg"
-                    alt="Sameer P."
+                    src="/test4.jpeg"
+                    alt="George."
                     className="w-16 h-16 rounded-full mr-6 border-4 border-white shadow-lg"
                   />
                  
@@ -128,7 +128,7 @@ export default function Testimonials() {
               <div className="flex items-center mb-6">
                 <div className="relative">
                   <img
-                    src="/test4.jpeg"
+                    src="/test3.jpg"
                     alt="."
                     className="w-16 h-16 rounded-full mr-6 border-4 border-white shadow-lg"
                   />

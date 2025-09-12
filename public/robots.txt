@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://indousnexusllp.com
+
+# Sitemaps
+Sitemap: https://indousnexusllp.com/sitemap.xml

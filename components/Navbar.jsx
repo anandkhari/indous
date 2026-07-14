@@ -10,7 +10,13 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   // Unified navigation links configuration
-  const navLinks = ["Home", "Tour Packages", "Gallery", "About Us", "Contact Us"];
+  const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "Tour Packages", href: "/tours" },
+    { label: "Gallery", href: "/gallery" },
+    { label: "About Us", href: "/aboutus" },
+    { label: "Contact Us", href: "/contactus" },
+  ];
 
   return (
     <>
@@ -34,17 +40,17 @@ export default function Navbar() {
 
           {/* Desktop Links */}
           <div className="hidden lg:flex space-x-8 font-['Poppins']">
-            {navLinks.map((link, i) => (
+            {navLinks.map((link) => (
               <motion.div
-                key={i}
+                key={link.href}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  href={`/${link === "Home" ? "" : link.toLowerCase().replace(" ", "")}`}
+                  href={link.href}
                   className="nav-link font-medium text-slate-700 hover:text-teal-600 py-2"
                 >
-                  {link}
+                  {link.label}
                 </Link>
               </motion.div>
             ))}
@@ -106,14 +112,14 @@ export default function Navbar() {
               </button>
             </div>
             <nav className="space-y-2 font-['Poppins']">
-              {navLinks.map((link, i) => (
+              {navLinks.map((link) => (
                 <Link
-                  key={i}
-                  href={`/${link === "Home" ? "" : link.toLowerCase().replace(" ", "")}`}
+                  key={link.href}
+                  href={link.href}
                   className="block text-lg font-medium text-slate-700 hover:text-teal-600 py-3 border-b border-gray-100"
                   onClick={() => setIsOpen(false)}
                 >
-                  {link}
+                  {link.label}
                 </Link>
               ))}
             </nav>

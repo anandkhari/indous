@@ -9,6 +9,9 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Unified navigation links configuration
+  const navLinks = ["Home", "Tour Packages", "Gallery", "About Us", "Contact Us"];
+
   return (
     <>
       {/* Navbar */}
@@ -31,7 +34,7 @@ export default function Navbar() {
 
           {/* Desktop Links */}
           <div className="hidden lg:flex space-x-8 font-['Poppins']">
-            {["Home", "About Us", "Gallery", "Contact Us"].map((link, i) => (
+            {navLinks.map((link, i) => (
               <motion.div
                 key={i}
                 whileHover={{ scale: 1.05 }}
@@ -103,7 +106,7 @@ export default function Navbar() {
               </button>
             </div>
             <nav className="space-y-2 font-['Poppins']">
-              {["Home", "Gallery", "About Us", "Contact Us"].map((link, i) => (
+              {navLinks.map((link, i) => (
                 <Link
                   key={i}
                   href={`/${link === "Home" ? "" : link.toLowerCase().replace(" ", "")}`}
